@@ -1,5 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
+import projMl1 from "../assets/img/projectMl1.png";
+import projR1 from "../assets/img/projectR1.jpg";
+import projR2 from "../assets/img/projectR2.jpg";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
@@ -8,25 +11,29 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
+/***define business card arrays***/
 
-  const projects1 = [
+/*project card for Machine learning tab*/
+  const projectsMl = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "Image classifier",
+      description: "Classify pictures uploaded with percentage of confidence",
+      imgUrl: projMl1,
     },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    }
+  //   {
+  //     title: "Business Startup",
+  //     description: "Design & Development",
+  //     imgUrl: projImg2,
+  //   },
+  //   {
+  //     title: "Business Startup",
+  //     description: "Design & Development",
+  //     imgUrl: projImg3,
+  //   }
   ];
-  const projects2 = [
+
+  /*project card for full-stack tab*/
+  const projectsFs = [
     {
       title: "Business Startup",
       description: "Design & Development",
@@ -43,22 +50,23 @@ export const Projects = () => {
       imgUrl: projImg3,
     },
   ];
-  const projects3 = [
+  /*project card for Robotics tab*/
+  const projectsR = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+      title: "Minibots",
+      description: "Line following and rescue robot",
+      imgUrl: projR1,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
+      title: "Integrated Design project",
+      description: "Self-navigation and block sorting robot",
+      imgUrl: projR2,
     },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
+    // {
+    //   title: "Business Startup",
+    //   description: "Design & Development",
+    //   imgUrl: projImg3,
+    // },
   ];
 
   return (
@@ -69,23 +77,23 @@ export const Projects = () => {
             <div>
               <h2>Projects</h2>
               <p>The projects are mainly software-based, including multiple areas of interest like robotics, machine learning and full-stack development. The tabs show some of the projects I have done.</p>
-              <Tab.Container id="projects-tabs" defaultActiveKey="first">
+              <Tab.Container id="projects-tabs" defaultActiveKey="first">   {/* Define tabs container*/} 
                 <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                   <Nav.Item>
-                    <Nav.Link eventKey="first">Machine learning</Nav.Link>
+                    <Nav.Link eventKey="machineLearn">Machine learning</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="second">Full-stack</Nav.Link>
+                    <Nav.Link eventKey="fullStack">Full-stack</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="third">Robotics</Nav.Link>
+                    <Nav.Link eventKey="robotics">Robotics</Nav.Link>
                   </Nav.Item>
                 </Nav>
-                <Tab.Content id="slideInUp">
-                  <Tab.Pane eventKey="first">
+                <Tab.Content id="slideInUp">  {/*Define attributes of the tab content including animation and relevant tab index */}
+                  <Tab.Pane eventKey="machineLearn">
                     <Row>
                       {
-                        projects1.map((project, index) => {
+                        projectsMl.map((project, index) => {     
                           return (
                             <ProjectCard
                               key={index}
@@ -96,10 +104,10 @@ export const Projects = () => {
                       }
                     </Row>
                   </Tab.Pane>
-                  <Tab.Pane eventKey="second">
+                  <Tab.Pane eventKey="fullStack">
                     <Row>
                         {
-                          projects2.map((project, index) => {
+                          projectsFs.map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
@@ -110,10 +118,10 @@ export const Projects = () => {
                         }
                     </Row>
                   </Tab.Pane>
-                  <Tab.Pane eventKey="third">
+                  <Tab.Pane eventKey="robotics">
                    <Row>
                       {
-                        projects3.map((project, index) => {
+                        projectsR.map((project, index) => {
                           return (
                             <ProjectCard
                               key={index}
