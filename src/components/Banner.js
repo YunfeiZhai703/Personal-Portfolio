@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/banner-animation.svg";
+import headerImg from "../assets/img/profile.jpg";
+import bannerImg from "../assets/img/banner-animation.svg";
 import { ArrowDownCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -50,22 +51,29 @@ export const Banner = () => {
 return (
   <section className="banner" id="home">
     <Container>
-      <Row className="aligh-items-center">
+      <Row className="row1 aligh-items-center">
         <Col xs={12} md={6} xl={7}>
-          {/*<span className="tagline">Welcome to my Portfolio</span> */}
+          <span className="tagline">Welcome to my Portfolio</span>
           <h1>Hi! I'm Yunfei Zhai</h1>
           <p>I am currently persuing my penulminate year of my undergraduate study in University of Cambridge in Information and Computing Engineering. I am interested in full-stack development, quantitative analysing strategy, and data science.</p>
-          <button>More about me <ArrowDownCircle size={25}/></button>
+          
         </Col>
         <Col xs={12} md={6} xl={5}>
-          <TrackVisibility>
-            {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__zoomIn" : "animate__animated animate__zoomOut"}>
-                <img src={headerImg} alt="Header Img"/>
-              </div>}
-          </TrackVisibility>
+        <img className="profileP" src={headerImg} alt="Header Img"/>
+            
         </Col>
       </Row>
+      <Row>
+        <Col xs={12} md={6} xl={6}> 
+          <div>
+            <img className="animationPh" src={bannerImg} alt="Header Img"/>  
+          </div>   
+        </Col>
+        <Col xs={12} md={6} xl={6}>
+          <p>Personality wise, I consider myself as a creative thinker. I think it’s important to approach tasks and issues from different angles, rather than just doing what has always been done. By having an open mind and taking a different approach, I believe you can find new and improved ways of doing things. I am also a drummer, a gamer and a gym person. If you are feeling connected, let's connect!</p>
+        </Col>
+      </Row> 
+        
     </Container>
   </section>
 )

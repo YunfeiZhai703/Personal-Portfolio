@@ -1,3 +1,4 @@
+import imgSkills from "../assets/img/Internet.svg";
 import meter1 from "../assets/img/meter1.svg";
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
@@ -10,6 +11,8 @@ import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png"
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 export const Skills = () => {
   const responsive = {
@@ -34,11 +37,27 @@ export const Skills = () => {
   return (
     <section className="skill" id="skills">
         <div className="container">
-            <div className="row">
+          <div className="row">
+            <div className="col-xs-12 col-md-6 col-xl-5">
+                <img className="skillsImg" src={imgSkills} alt="Header Img"/> 
+            </div>
+            <div className="col-xs-12 col-md-6 col-xl-7">
+            <TrackVisibility>
+                {({ isVisible }) =>
+                  <div className={isVisible ? "animate__animated animate__fadeIn" : "animate__animated animate__fadeOut"}>
+                    <p className="p1">I am now working on projects across a wide range of tech areas, including machine learning, front-end UI design using React.js and a bit of back-end server, data analysing model in finance.</p>
+                  </div>}
+            </TrackVisibility>             
+            </div>
+            
+            
+          </div>
+
+          <div className="row">
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>The skills listed are my most confident ones</p>
+                        <p className="p2">The skills listed are mainly software based</p>
                         <Carousel responsive={responsive} infinite={false} className="owl-carousel owl-theme skill-slider">     
                             <div className="item">
                                 <img src={meter1} alt="Image" />

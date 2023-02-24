@@ -242,7 +242,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-size: cover;
   background-repeat: no-repeat;
 }
-/* .banner .tagline {
+.banner .tagline {
   text-shadow: 0px 0px 1px rgb(255, 255, 255);
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -252,7 +252,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 20px;
   margin-bottom: 16px;
   display: inline-block;
-} */
+} 
+.banner .row1{
+  margin-bottom: 70px;
+}
 .banner h1 {
   text-shadow: 1px 2px 1px rgb(255, 255, 255);
   color:rgb(255, 255, 255);
@@ -264,18 +267,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: block;
 }
 .banner p {
+  padding-top: 40px;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 23px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 96%;
 }
 .banner button {
   color: rgb(255, 255, 255);
+  margin-top: 140px;
   font-weight: 700;
   font-size: 40px;
-  margin-top: 200px;
-  margin-bottom: 0%;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
@@ -289,7 +292,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button:hover svg {
   margin-left: 25px;
 }
-.banner img {
+.banner .profileP {
+  max-width: 80%;
+  height: auto;
+}
+.banner .animationPh {
   animation: updown 3s linear infinite;
 }
 @keyframes updown {
@@ -309,10 +316,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .skill {
-  background-image: url('./assets/img/galaxy.jpg');
-  padding: 300px 0 300px 0;
+  background-image: url('./assets/img/galaxy2.png');
+  padding: 100px 0 150px 0;
   position: relative;
 }
+
+.skill img{
+  max-width: 80%;
+  height: auto;
+}
+
 .skill-bx {
   background-color: rgb(38, 38, 38);
   border-radius: 64px;
@@ -325,7 +338,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 45px;
   font-weight: 700;
 }
-.skill p {
+.skill .p1{
+  padding: 30px 0 100px 0;
+  color: #B8B8B8;
+  font-size: 35px;
+}
+.skill .p2{
     color: #B8B8B8;
     font-size: 18px;
     letter-spacing: 0.8px;
@@ -345,10 +363,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .project {
-  height:800px;
-  padding: 80px 0px 150px 0px;
+  padding: 80px 0px 400px 0px;
   position: relative;
-  background-image: url('./assets/img/galaxy.jpg');
+  background-image: url('./assets/img/galaxy2.png');
 }
 .project h2 {
   font-size: 45px;
@@ -470,10 +487,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/************ Contact Css ************/
 .contact {
-  background: black;
+  background-image: url('./assets/img/galaxy3.png');
+  background-size: 150%;
   padding: 60px 0 200px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .contact img {
   width: 92%;
@@ -539,7 +559,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
   color: #121212;
-  opacity: 0.8;
+  opacity: 1;
 }
 .contact form button {
   font-weight: 700;
@@ -577,7 +597,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
-  background-color: #000000;
+  background-color: #222222;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

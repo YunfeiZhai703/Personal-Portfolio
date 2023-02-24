@@ -3,20 +3,18 @@ const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
-// server used to send emails
+// server used to send send emails
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-app.listen(5000, () => console.log("Server Running"));
-console.log(process.env.EMAIL_USER);
-console.log(process.env.EMAIL_PASS);
+app.listen(3000, () => console.log("Server Running"));
 
 const contactEmail = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'Gmail',
   auth: {
     user: "zyf20020305@gmail.com",
-    pass: "12345678QWEr!"
+    pass: "jkjs zskz dpot rbne"
   },
 });
 
@@ -28,7 +26,7 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("/contact", (req, res) => {
+router.post("/mail", (req, res) => {
   const name = req.body.firstName + req.body.lastName;
   const email = req.body.email;
   const message = req.body.message;
@@ -50,3 +48,5 @@ router.post("/contact", (req, res) => {
     }
   });
 });
+
+
