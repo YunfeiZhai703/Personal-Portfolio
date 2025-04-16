@@ -2,7 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![Uploading Screenshot 2025-04-16 at 18.32.58.png…]()
+<img width="1444" alt="personalPortfolio" src="https://github.com/user-attachments/assets/c8f42949-3617-4b40-acc3-2c05b147bb38" />
+
 
 
 Built using:
