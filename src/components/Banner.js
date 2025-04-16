@@ -55,7 +55,7 @@ return (
         <Col xs={12} md={6} xl={7}>
           <span className="tagline">Welcome to my Portfolio</span>
           <h1>Hi! I'm Yunfei Zhai</h1>
-          <p>I am currently persuing my penulminate year of my undergraduate study in University of Cambridge in Information and Computing Engineering. I am interested in full-stack development, quantitative analysing strategy, and data science.</p>
+          <p>I am currently persuing my penultimate year of my undergraduate study in University of Cambridge in Information and Computing Engineering. I am interested in full-stack development, quantitative analysing strategy, and data science.</p>
           
         </Col>
         <Col xs={12} md={6} xl={5}>
@@ -70,7 +70,7 @@ return (
           </div>   
         </Col>
         <Col xs={12} md={6} xl={6}>
-          <p>Personality wise, I consider myself as a creative thinker. I think it’s important to approach tasks and issues from different angles, rather than just doing what has always been done. By having an open mind and taking a different approach, I believe you can find new and improved ways of doing things. I am also a drummer, a gamer and a gym person. If you are feeling connected, let's connect!</p>
+          <p>Personality wise, I consider myself a creative thinker. I think it’s important to approach tasks and issues from different angles, rather than just doing what has always been done. By having an open mind and taking a different approach, I believe you can find new and improved ways of doing things. I am also a drummer, a gamer and a gym person. If you are feeling connected, let's connect!</p>
         </Col>
       </Row> 
         
